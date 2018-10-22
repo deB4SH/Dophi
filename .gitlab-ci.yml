@@ -13,4 +13,5 @@ build:
     - docker info
   image: krishofmans/gitlab-dind-maven:latest
   script:
-    - mvn -version
+    - mvn clean install
+    - mvn deploy

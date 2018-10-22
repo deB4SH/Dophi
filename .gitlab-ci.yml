@@ -16,13 +16,15 @@ variables:
   # improved performance.
   DOCKER_DRIVER: overlay2
 
-services:
-- docker:dind
+
 
 build:
   tags:
     - privileged
+  services:
+    - docker:dind
   before_script:
     - docker info
+  image: maven:latest
   script:
     - ls -l

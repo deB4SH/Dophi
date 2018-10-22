@@ -10,8 +10,7 @@ build:
   services:
     - docker:dind
   before_script:
-    - apt-get install docker
     - docker info
-  image: maven:latest
+  image: krishofmans/gitlab-dind-maven:latest
   script:
-    - ls -l
+    - mvn -version

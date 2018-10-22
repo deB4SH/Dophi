@@ -10,7 +10,7 @@ build:
   services:
     - docker:dind
   before_script:
-    - docker info
+    - docker login -u oswald -p $CI_JOB_TOKEN docker.0x09.de
   image: krishofmans/gitlab-dind-maven:latest
   script:
     - mvn clean install

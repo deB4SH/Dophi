@@ -23,7 +23,7 @@
         <docker.files.build.directory>${project.build.directory}/docker-files</docker.files.build.directory>
         <docker.run.wait.timeout>120000</docker.run.wait.timeout>
         <docker.push.registry>${docker.url}</docker.push.registry>
-        <image.name>${docker.url}/dophi:${project.version}</image.name>
+        <image.name>${docker.url}/deb4sh/dophi:${project.version}</image.name>
         <game.port>62001</game.port>
     </properties>
 

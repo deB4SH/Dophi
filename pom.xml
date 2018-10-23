@@ -119,7 +119,7 @@
                                     <date>DEFAULT</date>
                                 </log>
                                 <wait>
-                                    <log>.*Server launched.*</log>
+                                    <log>.*please run the service.*</log>
                                     <time>${docker.run.wait.timeout}</time>
                                 </wait>
                             </run>

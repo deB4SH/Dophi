@@ -8,8 +8,8 @@ RUN apk add unzip
 RUN mkdir -p /rimworld
 WORKDIR /rimworld
 COPY files/PhiServer.zip /rimworld/PhiServer.zip
-RUN unzip PhiServer.zip
-WORKDIR /rimworld/PhiServer
+RUN unzip PhiServer4.zip
+WORKDIR /rimworld/PhiServer4
 #RUN the server
 RUN mono PhiServer.exe > game.log
 CMD ["tail", "-f", "game.log"]

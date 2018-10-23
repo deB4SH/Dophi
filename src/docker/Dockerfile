@@ -7,7 +7,7 @@ RUN apk add unzip
 #PREPARE GAME DATA ENVIRONMENT
 RUN mkdir -p /rimworld
 WORKDIR /rimworld
-COPY files/PhiServer.zip /rimworld/PhiServer.zip
+COPY files/PhiServer4.zip /rimworld/PhiServer4.zip
 RUN unzip PhiServer4.zip
 WORKDIR /rimworld/PhiServer4
 #RUN the server

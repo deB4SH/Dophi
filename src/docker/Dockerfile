@@ -1,9 +1,13 @@
-FROM frolvlad/alpine-mono:5.14-glibc
-MAINTAINER deB4SH<github@b4sh.de>
-#CHANGE TO ROOT USER
-USER root
-#INSTALL REQUIRED PACKAGES
-RUN apk add unzip
+FROM debian:buster-slim
+#update sources
+RUN apt-get update
+#install packages
+RUN apt-get install mono-complete mono-runtime mono-dmcs tzdata wget unzip -y
+#clean up container
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /var/tmp/*
+#================
+#GAME RELATED STEPS
+#================
 #PREPARE GAME DATA ENVIRONMENT
 RUN mkdir -p /rimworld
 WORKDIR /rimworld
